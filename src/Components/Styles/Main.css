@@ -1,0 +1,78 @@
+/* React Task10 Capstone project */
+/* Main CSS for App, Game, Card, GameHelp, GameSats and GamerOver components */
+main {
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Stype the game header*/
+  .gameheader  h3 span {
+    color: rgb(7, 12, 7);
+    background-color: rgb(202, 201, 201);
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 15px;  
+  }
+
+  /* Grin container for card display*/
+  .grid-container {
+    display: grid;
+    grid-gap: 1px;
+    justify-content: center;
+    grid-template-columns: 4em 4em 4em 4em;
+  }
+   
+  .justify-left {
+    text-align: left
+  }
+  
+  .justify-end {
+    text-align: right;
+  }
+  
+  .justify-center {
+    text-align: center;
+  }
+   
+  /* Style the buttons */
+  .start-help-button  {
+    width: 10em;
+    height: 3em;
+    color: white;
+    background-color: #5168e9;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  
+  .restart-button {
+    background: red;
+    color: black;
+  }
+
+  .stats-button {
+    background: lightgreen;
+    color: black;
+  }
+
+  /* Style the cards*/
+  .card {
+    width: 100%;
+    height: 2.5em;
+    background-color: rgb(81, 165, 42);
+    color: black;
+    font-size: 25px;
+  }
+  
+  .hide-card {
+    visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #999999;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+  }
+  
+  .card-back {
+    font-weight: bold;
+    color: red;
+  }
