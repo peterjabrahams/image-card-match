@@ -8,7 +8,7 @@ main {
   /* Stype the game header*/
   .gameheader  h3 span {
     color: rgb(7, 12, 7);
-    background-color: rgb(202, 201, 201);
+    background-color: rgb(11, 83, 218);
     border-radius: 10px;
     padding: 15px;
     font-size: 15px;  
@@ -36,7 +36,7 @@ main {
    
   /* Style the buttons */
   .start-help-button  {
-    width: 10em;
+    width: 8em;
     height: 3em;
     color: white;
     background-color: #5168e9;
@@ -50,6 +50,8 @@ main {
   }
 
   .stats-button {
+    width: 10em;
+    height: 3em;
     background: lightgreen;
     color: black;
   }

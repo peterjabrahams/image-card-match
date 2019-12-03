@@ -74,29 +74,32 @@ class Game extends React.Component {
     // increase the match count and decrease the unmatch count
   
     isCardMatch = (card1, card2, card1Id, card2Id) => {
-        if (card1 === card2) {
+    //  if (card1Id = card2Id) {
+    //    return();
+    //  }
+        if (card1 === card2 && card1Id !== card2Id) {
             const match =  this.state.matchCount + 1
             const unmatch =  this.state.unmatchCount - 1
             this.setState ({
                 matchCount: match,
                 unmatchCount: unmatch,
                 });
-
-        const hideCard = this.state.shuffledCard.slice();
-        hideCard[card1Id] = -1;
-        hideCard[card2Id] = -1;
-        setTimeout(() => {
+            // hide the cards if they match
+            const hideCard = this.state.shuffledCard.slice();
+            hideCard[card1Id] = -1;
+            hideCard[card2Id] = -1;
+          setTimeout(() => {
               this.setState(prevState => ({
               shuffledCard: hideCard
                }))
-            }, 1000);
+            }, 300);
         } else {
-            const flipBack = this.state.isFlipped.slice();
+          const flipBack = this.state.isFlipped.slice();
             flipBack[card1Id] = false;
             flipBack[card2Id] = false;
             setTimeout(() => {
               this.setState(prevState => ({ isFlipped: flipBack }));
-            }, 1000);
+            }, 500);
         }
         const matchcnt = this.state.matchCount;
         const unmatchcnt = this.props.unmatchedcount -1;

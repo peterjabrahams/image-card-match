@@ -10,7 +10,7 @@ class GameStats extends React.Component {
   }
 
   static getDerivedStateFromProps(props, state) {
-    console.log(props);
+    //console.log(props);
     if (props.unmatchcount !==  state.prevunmatchcount) {
         return {
             prevunmatchcount: props.unmatchcount

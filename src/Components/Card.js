@@ -5,7 +5,7 @@ import React from 'react';
 
 // import the card flip component installed for npm - npm install --save react-card-flip
 // to use the card flipping animation.
-// props recieved from the game component isFlipped will flip the card open or closed 
+// props recieved from the game component isFlipped will flip the cards open or closed 
 import ReactCardFlip from "react-card-flip";
 
 function Card(props) { 
@@ -16,7 +16,7 @@ function Card(props) {
 
     // Layout of cards is via "grid-container" in Game component
     return (
-        <ReactCardFlip isFlipped={props.isFlipped} flipSpeedBackToFront={.5} 
+        <ReactCardFlip isFlipped={props.isFlipped} flipSpeedBackToFront={1} 
            flipSpeedFrontToBack={.5} flipDirection="vertical">
            <button id={props.id} title="Click Card" className={`card card-front ${props.cardSymbol !== -1 ? "" : "hide-card"}`} 
                 onClick={props.handleClick} key="front">
