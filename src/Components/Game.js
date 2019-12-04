@@ -74,9 +74,9 @@ class Game extends React.Component {
     // increase the match count and decrease the unmatch count
   
     isCardMatch = (card1, card2, card1Id, card2Id) => {
-    //  if (card1Id = card2Id) {
-    //    return();
-    //  }
+    if (card1Id === card2Id) {
+       return(null);
+    }
         if (card1 === card2 && card1Id !== card2Id) {
             const match =  this.state.matchCount + 1
             const unmatch =  this.state.unmatchCount - 1
